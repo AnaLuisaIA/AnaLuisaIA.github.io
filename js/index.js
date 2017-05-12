@@ -123,7 +123,7 @@ comentariosRef.on('child_added', function(snapshot) {
 //Acción cuando se da click en el botón de enviar
 function ponerComentario() {
   //Si no seleccionó una opción de menú
-  if (!opcionMenu) {
+  if (opcionMenu != null) {
     //Dispara una alerta para señalar al usuario que debe escoger una opción del menú
     alert("Escoge la opción del menú");
   }//Si hay valores tanto en nombre, comentario y opcionMenu los almacena en la base de datos
