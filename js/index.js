@@ -18,6 +18,7 @@ $(document).ready(function() {
 var campoLogin = document.getElementById('nombre_user');
 var campoSesion = document.getElementById('sesion');
 var icono = document.getElementById('icon');
+var comentarioText = document.getElementById('textarea1');
 //Guarda en variables los valores que obtiene de los elementos necesarios para
 //realizar un comentario
 var nombre = document.getElementById('nombre_user').value;
@@ -137,8 +138,8 @@ function ponerComentario() {
     });
   }
   //Se setean el campo de nombre y comentario en blanco
-  nombre.value = '';
-  comentario.value = '';
+  campoLogin.value = '';
+  comentarioText.value = '';
 }
 
 //Autenticación mediante google
