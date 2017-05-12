@@ -23,7 +23,6 @@ var comentarioText = document.getElementById('textarea1');
 //realizar un comentario
 var nombre = document.getElementById('nombre_user').value;
 var comentario = document.getElementById('textarea1').value;
-var opcionMenu = document.getElementById('seleccion').value;
 
 //Modificación de la forma en cómo se muestra la fecha y hora
 const timeStamp = () => {
@@ -122,6 +121,7 @@ comentariosRef.on('child_added', function(snapshot) {
 
 //Acción cuando se da click en el botón de enviar
 function ponerComentario() {
+  var opcionMenu = document.getElementById('seleccion').value;
   //Si no seleccionó una opción de menú
   if (opcionMenu == null) {
     //Dispara una alerta para señalar al usuario que debe escoger una opción del menú
