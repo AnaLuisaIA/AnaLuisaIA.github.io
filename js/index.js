@@ -136,10 +136,10 @@ function ponerComentario() {
       opcionMenu: opcionMenu,
       horaComentario: timeStamp()
     });
+    //Se setean el campo de nombre y comentario en blanco
+    campoLogin.value = '';
+    comentarioText.value = '';
   }
-  //Se setean el campo de nombre y comentario en blanco
-  campoLogin.value = '';
-  comentarioText.value = '';
 }
 
 //Autenticación mediante google
