@@ -1,0 +1,126 @@
+/*
+
+font-family: 'Abel', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Amatic SC', cursive;
+  font-family: 'Raleway', sans-serif;
+*/
+
+
+.header-cena{
+  background-image: url("img/moon.jpg");
+  height: 30vh;
+  font-family: 'Pacifico', cursive;
+}
+
+.titulo{
+  padding: 0;
+  margin: 0;
+}
+
+.frase-header{
+  font-size: 180%;
+  font-family: 'Amatic SC', cursive;
+}
+
+.title-card-juan{
+  font-size: 110%;
+
+}
+
+.img-extend{
+  display: absolute;
+  top:0px;
+  height: 27vh;
+}
+
+.img-corta{
+  height: 100%;
+}
+
+
+.kappa{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.kappita{
+  position: absolute;
+overflow: hidden;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+}
+
+.kappocha{
+position: relative;
+}
+
+.kappocha:hover .kappa{
+  width: 100%;
+}
+
+.header-bebidas{
+  background-image: url(img/bebidas_opt.png);
+  height: 20vh;
+  width: 100%;
+}
+
+.contenedor{
+  margin: 0 4em;
+}
+
+.boton-ordenar{
+  position: fixed;
+  right: 5vw;
+  bottom: 5vh;
+}
+
+.label-check{
+  color:#000;
+}
+
+.label-check:hover {
+  color:red;
+  text-decoration: underline;
+
+}
+
+
+
+
+.precio{
+  margin-top: 3em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#divTabla{
+  display: none;
+}
+
+
+.contenedor-tabla{
+  background-color: #fff;
+}

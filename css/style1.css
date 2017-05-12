@@ -1,0 +1,111 @@
+nav.top-nav {
+  box-shadow: none;
+  background-color: #a5d6a7;
+}
+
+nav.top-nav a.page-title {
+  font-size: 30px;
+  font-family: 'Pacifico';
+}
+
+.side-nav li {
+  float: none;
+  font-family: 'Comfortaa';
+}
+
+.side-nav li a {
+  font-size: 1.9em;
+}
+
+.side-nav .collapsible-body, .side-nav.fixed .collapsible-body {
+  padding-top: 10px;
+}
+
+ul.side-nav.fixed ul.collapsible-accordion a.collapsible-header {
+  padding: 0 30px;
+}
+
+@media only screen and (max-width: 992px) {
+  .side-nav a {
+    padding: 0 30px;
+  }
+}
+
+ul.side-nav.fixed li {
+  line-height: 4em;
+}
+
+a i {
+  color: white;
+}
+
+#tecnologico{
+  font-family: 'Taviraj';
+}
+#logo_sep {
+  padding-top: 1em;
+  padding-left: 2em;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#logo_tec {
+  padding-top: 1em;
+  padding-right: 4em;
+  max-width: 60%;
+  max-height: 60%;
+}
+.fondo{
+  background-color: #e0f2f1 ;
+}
+#nombre{
+  font-size: 2.5em;
+  -webkit-transition: color .4s linear;
+  -moz-transition: color .4s linear;
+  -ms-transition: color .4s linear;
+  -o-transition: color .4s linear;
+  transition: color .4s linear;
+}
+#nombre:hover{
+  color: #DD969C;
+
+}
+
+.carousel .carousel-item img {
+    width: 50%;
+}
+
+.card-panel{
+  border-radius: 10px;
+}
+
+header, main, footer {
+  padding-left: 280px;
+}
+
+@media only screen and (max-width: 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+.cchico{
+  max-width: 20%;
+  max-height: 20%;
+}
+#nombreInt{
+  padding-left: 1.5em;
+}
+footer.page-footer {
+  padding-top: 0px;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}

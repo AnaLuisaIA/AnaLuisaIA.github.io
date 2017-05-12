@@ -1,0 +1,195 @@
+.header{
+	background: rgba(0,0,0,.5);
+	height: 30vh;
+}
+
+.contenedor-principal{
+	background-image: url("img/Pineaple.jpg");
+
+}
+
+.titulo-principal{
+	margin: 0;
+	color:#fbc02d ;
+	font-family: 'Bubblegum Sans', cursive;
+	font-size: 6em;
+}
+.fa fa-sun-o{
+	color:black;
+}
+
+.conoceme-container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: center;
+}
+
+.segundoTexto{
+	font-family: 'Shadows Into Light Two', cursive;
+	color: white;
+	margin: 0;
+	font-size: 2.5em;
+}
+
+.card-content{
+	font-family: 'Bubblegum Sans', cursive;
+	font-size: 1.5em;
+}
+
+.color-cuadro{
+	background-color: #cddc39 ;
+
+}
+
+.Caja-higos{
+	border-radius: 50px;
+}
+
+.modal-content{
+	background-color: #dce775 ;
+	font-family: 'Rancho', cursive;
+
+}
+
+.texto-lechuga{
+	font-size: 2em;
+}
+
+.texto-higos{
+	font-size: 2em;
+}
+
+.texto-vegetales{
+	font-size: 2em;
+}
+
+.fila-ensalada{
+	margin-top:.4%;
+}
+
+.chip{
+	margin: 2%;
+	width: 40%;
+	background-color: #9e9d24 ;
+	font-size: 2em;
+
+}
+.secciones{
+	color:white;
+	margin: 0;
+	font-size: 1.5em;
+		font-family: 'Rancho', cursive;;
+	}
+
+.Titulo-centrado{
+	font-family: 'Bubblegum Sans', cursive;
+	color: #e65100;
+}
+.margen-check{
+	margin: 2em;
+	size: 3em;
+}
+
+
+.color-menu{
+	color:blue;
+}
+
+.margenes-check{
+	margin: .5em;
+	color: black;
+}
+.ColorChip{
+	margin: 2%;
+	width: 40%;
+	background-color:#ff5722 ;
+	font-size: 2em
+
+	}
+
+.modal-content2{
+	background-color:#ffe082;
+	font-family: 'Rancho', cursive;
+}
+
+.modal-content3{
+	background-color: #f48fb1 ;
+	font-family: 'Rancho', cursive;
+}
+.modal-content4{
+	background-color: #bbdefb  ;
+	font-family: 'Rancho', cursive;
+}
+.color-cuadro2{
+	background-color:#ffe082;
+
+}
+
+.color-cuadro3{
+	background-color: #f06292 ;
+
+}
+
+
+.color-chip2{
+	background-color: #ec407a  ;
+}
+.color-chip3{
+	background-color:#01579b;
+}
+
+.color-cuadro4{
+	background-color: #80deea ;
+
+}
+
+/* para cambiar vista del menú por defecto*/
+.tabs .tab a{
+	color: black;
+	/*background-color: #f8bbd0;*/
+}
+
+/* para cambiar vista de cada submenu cuando pasas el mouse encima*/
+
+.tabs .tab a:hover{
+	color: #ffffff;
+
+}
+
+/* para cambiar vista de cada submenu cuando das click*/
+.tabs .tab a:active{
+	color: white;
+	background-color: orange;
+}
+
+/* para cambiar vista del menú que esta activo/seleccionado */
+.tabs .tab a.active{
+	color: black;
+	background-color: #a5d6a7;
+
+}
+
+.caja-manu{
+	background-color:#ef5350  ;
+	size: 5em;
+}
+.precio{
+margin:0em;
+font-size: 1.4em;
+}
+
+#divTabla{
+	display: none;
+}
+
+.contenedor-tabla{
+	background-color: #c8e6c9;
+}
+
+.boton-ordenar{
+	position: fixed;
+	right: 5vw;
+	bottom: 5vw;
+}

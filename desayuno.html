@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Desayuno</title>
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/style1.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/desayuno.css">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Bubblegum+Sans|Fredoka+One|Indie+Flower|Josefin+Slab|Neucha|Rancho|Shadows+Into+Light+Two" rel="stylesheet">
+</head>
+
+<body class="fondo contenedor-principal">
+  <header>
+    <nav class="top-nav">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a class="page-title">Comidas</a>
+          <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
+            <i class="fa fa-bars fa-3x" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </nav>
+    <ul id="nav-mobile" class="side-nav fixed">
+      <li class="logo"><img src="css/img/logo.png"></a></li>
+      <li><a class="waves-effect bold" href="index.html">Inicio</a></li>
+      <li><a class="waves-effect bold" href="#!">Nosotros</a></li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li class="bold">
+            <a class="collapsible-header waves-effect">Menús</a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a class="waves-effect" href="desayuno.html">Desayuno</a></li>
+                <li><a class="waves-effect" href="comidas.html">Comida</a></li>
+                <li><a class="waves-effect" href="cena.html">Cena</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+			<li><a class="waves-effect bold" href="comentarios.html">Comentarios</a></li>
+    </ul>
+    </div>
+  </header>
+
+
+<main>
+
+    <nav class="header valign-wrapper">
+        <div class="nav-wrapper">
+          <h1 class="titulo-principal center-align">Desayuno</h1>
+          <h5 class="segundoTexto center-align hide-on-med-and-down">Ofrecemos deliciosos platillos que ayudarán a comenzar tu día de una forma saludable:</h5>
+          <!--<a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
+            <i class="fa fa-bars fa-3x" aria-hidden="true"></i></a>-->
+      	</div>
+
+    </nav>
+
+    <div class="nav-content">
+      <ul class="tabs center caja-manu">
+        <li class="tab "><a class="margen active color-menu" href="#test1">Entrada</a></li>
+        <li class="tab "><a class="margen color-menu"  href="#test2">Plato Fuerte</a></li>
+        <li class="tab "><a class="margen color-menu" href="#test3">Postre</a></li>
+        <li class="tab "><a class="margen color-menu" href="#test4">Bebidas</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<!--EEEEEEEEEEEEENNNNNNNNNNSSSSSSSAAAAAAALLLLLLLADDDDDDDDDDAAAAAAAAAAAAAAAASSSSSSSSSS-->
+<!--Sección de código de la entrada del desayuno mostrado en tabs (herramiento de materialize)
+nos serán de ayuda para seccionar cada parte del código mostrada en un menú en el que el usuario
+podrá elegir entrada, plato fuerte, postre y bebidas es por ellos que se trabajrán con 4 tabs según sea el caso, esto dará una vista diferente pudiendose desplazar dependiendo la elección del usuario-->
+<div id="test1" class="col s12">
+
+      <!--En este div decalramos la clase propia de materialize llamada
+      "Center chip solo para ir seccionando cada parte de la vista de la
+      entrada del desayuno (Ensalada, Coctel de frutas, Pan)"-->
+      <div class="center chip">
+          <p class="secciones">Ensaladas<p>
+      </div>
+
+    <div class="row center-align fila-ensalada">
+          <!--En esta parte se mostrará la targeta que incluye las ensaladas, con texto e imagen
+          se tiene un nombre del platillo, se le agregan nombres a las clases para agregar estilo
+          en el CSS, podemos notar que se trabaja con modals para agregar información al hacer click
+          al botón de "Leer más" es por ello que se le debe agregar un id a cada modal para que se le pueda añadir estilo según sea el caso, es necesario añadir un precio mostrado al usuario para realizar las cuentas dentro del JS cuando el usuario seleccione los productos -->
+          <div class="col s12 m4">
+            <div class="card Caja-lechuga">
+                <div class="card-image">
+                  <img src="css/img/ELechuga.jpg">
+                </div>
+                <div class="card-content color-cuadro">
+                  <p>Ensalada de hojas de lechuga</p>
+                  </div>
+
+                <div class="card-action">
+                    <a class="waves-effect waves-light btn" href="#modal1">Leer más</a>
+                    <h5 class="precio right">$60</h5>
+                    <input type="checkbox" id="lechuga" />
+                       <label class="margen-check margenes-check" for="lechuga">Ordenar ahora</label>
+                </div>
+              </div>
+          </div>
+
+
+          <div class="col s12 m4">
+  	        <div class="card caja-higos">
+  	            <div class="card-image">
+  	              <img src="css/img/EnsaladaHigos.jpg">
+  	            </div>
+  	            <div class="card-content color-cuadro">
+  	              <p>Ensalada de higos con queso</p>
+  	            </div>
+  	            <div class="card-action">
+  	              <a class="waves-effect waves-light btn" href="#modal2">Leer más</a>
+                  <h5 class="precio right">$75</h5>
+  	              <input type="checkbox" id="higos" />
+  	                   <label class="margen-check margenes-check" for="higos">Ordenar ahora</label>
+  	            </div>
+  	         </div>
+          </div>
+
+        <div class="col s12 m4">
+          <div class="card caja-fresca">
+            <div class="card-image">
+              <img src="css/img/Ensalada-Fresca.jpg">
+            </div>
+            <div class="card-content color-cuadro">
+              <p>Ensalada fresca</p>
+            </div>
+            <div class="card-action">
+              <a class="waves-effect waves-light btn" href="#modal3">Leer más</a>
+              <h5 class="precio right">$70</h5>
+              <input type="checkbox" id="e-fresca" />
+                   <label class="margen-check margenes-check" for="e-fresca">Ordenar ahora</label>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+        <div class="center chip">
+            <p class="secciones">Coctel de frutas<p>
+        </div>
+    <!--COOOOOOOOOOOOOOOOOOOOOCCCCCCCKKTTTTTTTTTTTELLLLLLLLLLFRUUUUUUUUUUUUUUUUTTTTTTTTTTTAAAAAAAAAA-->
+
+    <div class="row center-align fila-ensalada">
+
+            <div class="col s12 m4">
+              <div class="card Caja-manzana">
+                  <div class="card-image">
+                    <img src="css/img/Coctel-manzana.jpg">
+
+                  </div>
+                  <div class="card-content color-cuadro">
+                    <p>Coctel con manzana</p>
+                  </div>
+                  <div class="card-action">
+                     <a class="waves-effect waves-light btn" href="#modal4">Leer más</a>
+                     <h5 class="precio right">$50</h5>
+                     <input type="checkbox" id="manzana" />
+                         <label class="margen-check margenes-check" for="manzana">Ordenar ahora</label>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="col s12 m4">
+              <div class="card caja-kiwi">
+                <div class="card-image">
+                  <img src="css/img/Coctel-kiwi.jpg">
+
+                </div>
+                <div class="card-content color-cuadro">
+                  <p>Coctel con kiwi</p>
+                </div>
+                <div class="card-action">
+                  <a class="waves-effect waves-light btn" href="#modal5">Leer más</a>
+                  <h5 class="precio right">$65</h5>
+                  <input type="checkbox" id="kiwi" />
+                       <label class="margen-check margenes-check" for="kiwi">Ordenar ahora</label>
+                </div>
+              </div>
+            </div>
+
+              <div class="col s12 m4">
+                <div class="card caja-piña">
+                  <div class="card-image">
+                    <img src="css/img/Coctelpina.jpg">
+
+                  </div>
+                  <div class="card-content color-cuadro">
+                    <p>Coctel con piña</p>
+                  </div>
+                  <div class="card-action">
+                    <a class="waves-effect waves-light btn" href="#modal6">Leer más</a>
+                    <h5 class="precio right">$45</h5>
+                    <input type="checkbox" id="piña" />
+                         <label class="margen-check margenes-check" for="piña">Ordenar ahora</label>
+                  </div>
+                </div>
+              </div>
+     </div>
+
+<!-- PPPPPPPPPPPPPPPPPPPPPPPPPAAAAAAAAAAAAAAAAAAAAAAAAANNNNNNNNNNNNN   -->
+        <div class="center chip">
+            <p class="secciones">Pan<p>
+        </div>
+
+     <div class="row center-align">
+
+          <div class="col s12 m4">
+              <div class="card Caja-lechuga">
+                  <div class="card-image">
+                    <img src="css/img/Pan-pasas.jpg">
+                  </div>
+                  <div class="card-content color-cuadro">
+                    <p>Pan de pasas</p>
+                  </div>
+                  <div class="card-action">
+                     <a class="waves-effect waves-light btn" href="#modal7">Leer más</a>
+                     <h5 class="precio right">$18</h5>
+                     <input type="checkbox" id="pasas" />
+                     <label class="margen-check margenes-check" for="pasas">Ordenar ahora</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="card caja-higos">
+                  <div class="card-image">
+                    <img src="css/img/donas.jpg">
+                  </div>
+                  <div class="card-content color-cuadro">
+                    <p>Donas</p>
+                  </div>
+                  <div class="card-action">
+                    <a class="waves-effect waves-light btn" href="#modal8">Leer más</a>
+                    <h5 class="precio right">$15</h5>
+                    <input type="checkbox" id="donas" />
+                    <label class="margen-check margenes-check" for="donas">Ordenar ahora</label>
+                  </div>
+              </div>
+          </div>
+
+              <div class="col s12 m4">
+                <div class="card caja-fresca">
+                  <div class="card-image">
+                    <img src="css/img/concha.png">
+                  </div>
+                  <div class="card-content color-cuadro">
+                    <p>Concha con almendras</p>
+                  </div>
+                  <div class="card-action">
+                    <a class="waves-effect waves-light btn" href="#modal9">Leer más</a>
+                    <h5 class="precio right">$30</h5>
+                    <input type="checkbox" id="almendras" />
+                    <label class="margen-check margenes-check" for="almendras">Ordenar ahora</label>
+                  </div>
+                </div>
+            </div>
+      </div>
+
+</div>
+
+    <!---->
+<!--111111111111111111111111111111111111111111111111111111111111111111111111111111111-->
+
+<!--222222222222222222222222222222222222222222222222222222222222222222222222222222222-->
+
+<!--pllllllllllllllllllaaaaaaaaaaaaatoooooooooofffffffffuuuuuuuerrrrrrrrteeeeeeeee-->
+
+
+
+<div id="test2" class="col s12">
+  		<div class="chip ColorChip">
+  		    <p class="secciones center">Platillos Ligeros<p>
+  		</div>
+
+  <div class="row center-align fila-ensalada">
+            <div class="col s12 m4">
+              <div class="card Caja-manzana">
+                  <div class="card-image">
+                    <img src="css/img/Quesadilla.jpg">
+
+                  </div>
+                  <div class="card-content color-cuadro2">
+                    <p>Quesadilla de queso</p>
+                  </div>
+                  <div class="card-action">
+                     <a class="waves-effect waves-light btn" href="#modal10">Leer más</a>
+                     <h5 class="precio right">$80</h5>
+                     <input type="checkbox" id="quesadilla" />
+                         <label class="margen-check margenes-check" for="quesadilla">Ordenar ahora</label>
+                  </div>
+                </div>
+            </div>
+
+
+
+              <div class="col s12 m4">
+              <div class="card caja-kiwi">
+                  <div class="card-image">
+                    <img src="css/img/Filete-Esparragos.jpg">
+
+                  </div>
+                  <div class="card-content color-cuadro2">
+                    <p>Filete de pollo asado</p>
+                  </div>
+                  <div class="card-action">
+                    <a class="waves-effect waves-light btn" href="#modal11">Leer más</a>
+                    <h5 class="precio right">$100</h5>
+                    <input type="checkbox" id="filete-pollo" />
+                         <label class="margen-check margenes-check" for="filete-pollo">Ordenar ahora</label>
+                  </div>
+                </div>
+
+            </div>
+
+              <div class="col s12 m4">
+                <div class="card caja-piña">
+                  <div class="card-image">
+                    <img src="css/img/Huevos-Revueltos.jpg">
+
+                  </div>
+                  <div class="card-content color-cuadro2">
+                    <p>Huevos Revueltos</p>
+                  </div>
+                  <div class="card-action">
+                    <a class="waves-effect waves-light btn" href="#modal12">Leer más</a>
+                    <h5 class="precio right">$85</h5>
+                    <input type="checkbox" id="huevos-revueltos" />
+                         <label class="margen-check margenes-check" for="huevos-revueltos">Ordenar ahora</label>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col s12 m4">
+                <div class="card caja-piña">
+                  <div class="card-image">
+                    <img src="css/img/Nopales-asados.jpg">
+
+                  </div>
+                  <div class="card-content color-cuadro2">
+                    <p>Nopales asados/Queso</p>
+                  </div>
+                  <div class="card-action">
+                    <a class="waves-effect waves-light btn" href="#modal13">Leer más</a>
+                    <h5 class="precio right">$70</h5>
+                    <input type="checkbox" id="nopales-asados" />
+                         <label class="margen-check margenes-check" for="nopales-asados">Ordenar ahora</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col s12 m4">
+                <div class="card caja-piña">
+                  <div class="card-image">
+                    <img src="css/img/Caldo-pollo.jpg">
+
+                  </div>
+                  <div class="card-content color-cuadro2">
+                    <p>Caldo de pollo</p>
+                  </div>
+                  <div class="card-action">
+                    <a class="waves-effect waves-light btn" href="#modal14">Leer más</a>
+                    <h5 class="precio right">$95</h5>
+                    <input type="checkbox" id="caldo-pollo" />
+                         <label class="margen-check margenes-check" for="caldo-pollo">Ordenar ahora</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col s12 m4">
+                <div class="card caja-piña">
+                  <div class="card-image">
+                    <img src="css/img/Calabazas.jpg">
+
+                  </div>
+                  <div class="card-content color-cuadro2">
+                    <p>Calabazas a la Mexicana</p>
+                  </div>
+                  <div class="card-action">
+                    <a class="waves-effect waves-light btn" href="#modal15">Leer más</a>
+                    <h5 class="precio right">$70</h5>
+                    <input type="checkbox" id="calabazas" />
+                         <label class="margen-check margenes-check" for="calabazas">Ordenar ahora</label>
+                  </div>
+                </div>
+              </div>
+
+  </div>
+
+      <div class="chip ColorChip">
+          <p class="secciones center">Platillos tradicioanles</p>
+      </div>
+
+     <div class="row center-align fila-ensalada">
+                <div class="col s12 m4">
+                  <div class="card Caja-manzana">
+                      <div class="card-image">
+                        <img src="css/img/Chilaquiles-Rojos.jpg">
+
+                      </div>
+                      <div class="card-content color-cuadro2">
+                        <p>Chilaquiles Rojos</p>
+                      </div>
+                      <div class="card-action">
+                          <a class="waves-effect waves-light btn" href="#modal16">Leer más</a>
+                          <h5 class="precio right">$65</h5>
+                         <input type="checkbox" id="chilaquiles-r" />
+                             <label class="margen-check margenes-check" for="chilaquiles-r">Ordenar ahora</label>
+                      </div>
+                    </div>
+                </div>
+
+
+                  <div class="col s12 m4">
+                  <div class="card caja-kiwi">
+                      <div class="card-image">
+                        <img src="css/img/Tamales.jpg">
+
+                      </div>
+                      <div class="card-content color-cuadro2">
+                        <p>Tamales de nopales</p>
+                      </div>
+                      <div class="card-action">
+                        <a class="waves-effect waves-light btn" href="#modal17">Leer más</a>
+                        <h5 class="precio right">$60</h5>
+                        <input type="checkbox" id="tamales" />
+                             <label class="margen-check margenes-check" for="tamales">Ordenar ahora</label>
+                      </div>
+                    </div>
+
+                </div>
+
+                  <div class="col s12 m4">
+                    <div class="card caja-piña">
+                      <div class="card-image">
+                        <img src="css/img/Chilaquiles-Huevo.jpg">
+
+                      </div>
+                      <div class="card-content color-cuadro2">
+                        <p>Chilaquiles verdes C/Huevos estrellados</p>
+                      </div>
+                      <div class="card-action">
+                        <a class="waves-effect waves-light btn" href="#modal18">Leer más</a>
+                        <h5 class="precio right">$90</h5>
+                        <input type="checkbox" id="chilaquiles-v" />
+                             <label class="margen-check margenes-check" for="chilaquiles-v">Ordenar ahora</label>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col s12 m4">
+                      <div class="card caja-piña">
+                        <div class="card-image">
+                          <img src="css/img/Taco-Mexicano.jpg">
+
+                        </div>
+                        <div class="card-content color-cuadro2">
+                          <p>Taco Mexicano</p>
+                        </div>
+                        <div class="card-action">
+                          <a class="waves-effect waves-light btn" href="#modal19">Leer más</a>
+                          <h5 class="precio right">$50</h5>
+                          <input type="checkbox" id="taco-mexicano" />
+                               <label class="margen-check margenes-check" for="taco-mexicano">Ordenar ahora</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col s12 m4">
+                        <div class="card caja-piña">
+                          <div class="card-image">
+                            <img src="css/img/Enchiladas-rojas.jpg">
+
+                          </div>
+                          <div class="card-content color-cuadro2">
+                            <p>Orden de enchiladas rojas</p>
+                          </div>
+                          <div class="card-action">
+                            <a class="waves-effect waves-light btn" href="#modal20">Leer más</a>
+                            <h5 class="precio right">$70</h5>
+                            <input type="checkbox" id="enchiladas-rojas" />
+                                 <label class="margen-check margenes-check" for="enchiladas-rojas">Ordenar ahora</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col s12 m4">
+                        <div class="card caja-piña">
+                          <div class="card-image">
+                            <img src="css/img/Enchiladas-verdes.jpg">
+
+                          </div>
+                          <div class="card-content color-cuadro2">
+                            <p>Orden de enchiladas verdes</p>
+                          </div>
+                          <div class="card-action">
+                            <a class="waves-effect waves-light btn" href="#modal21">Leer más</a>
+                            <h5 class="precio right">$70</h5>
+                            <input type="checkbox" id="enchiladas-verdes" />
+                                 <label class="margen-check margenes-check" for="enchiladas-verdes">Ordenar ahora</label>
+                          </div>
+                        </div>
+                        </div>
+
+                        <div class="col s12 m4">
+                        <div class="card caja-piña">
+                          <div class="card-image">
+                            <img src="css/img/Tostada-tinga.jpg">
+
+                          </div>
+                          <div class="card-content color-cuadro2">
+                            <p>Orden de tostadas de tinga</p>
+                          </div>
+                          <div class="card-action">
+                            <a class="waves-effect waves-light btn" href="#modal22">Leer más</a>
+                            <h5 class="precio right">$75</h5>
+                            <input type="checkbox" id="tostadas-tinga" />
+                                 <label class="margen-check margenes-check" for="tostadas-tinga">Ordenar ahora</label>
+                          </div>
+                        </div>
+                        </div>
+
+                        <div class="col s12 m4">
+                        <div class="card caja-piña">
+                          <div class="card-image">
+                            <img src="css/img/Sopes.png">
+
+                          </div>
+                          <div class="card-content color-cuadro2">
+                            <p>Orden de sopes</p>
+                          </div>
+                          <div class="card-action">
+                            <a class="waves-effect waves-light btn" href="#modal23">Leer más</a>
+                            <h5 class="precio right">$60</h5>
+                            <input type="checkbox" id="sopes" />
+                                 <label class="margen-check margenes-check" for="sopes">Ordenar ahora</label>
+                          </div>
+                        </div>
+                        </div>
+
+
+                          <div class="col s12 m4">
+                          <div class="card caja-piña">
+                            <div class="card-image">
+                              <img src="css/img/Pechuga-rellena.jpg">
+
+                            </div>
+                            <div class="card-content color-cuadro2">
+                              <p>Pechuga rellena</p>
+                            </div>
+                            <div class="card-action">
+                              <a class="waves-effect waves-light btn" href="#modal24">Leer más</a>
+                              <h5 class="precio right">$85</h5>
+                              <input type="checkbox" id="pechuga-rellena" />
+                                   <label class="margen-check margenes-check" for="pechuga-rellena">Ordenar ahora</label>
+                            </div>
+                          </div>
+                          </div>
+      </div>
+
+</div>
+
+<!--222222222222222222222222222222222222222222222222222222222222222222222222222222222-->
+<div id="test3" class="col s12">
+    <div class="chip color-chip2">
+        <p class="secciones center">Los mejores postres<p>
+    </div>
+
+  <div class="row center-align fila-ensalada">
+
+              <div class="col s12 m4">
+                      <div class="card caja-piña">
+                        <div class="card-image">
+                          <img src="css/img/calabaza.jpg">
+
+                        </div>
+                        <div class="card-content color-cuadro3">
+                          <p>Calabaza en dulce</p>
+                        </div>
+                        <div class="card-action">
+                          <a class="waves-effect waves-light btn" href="#modal25">Leer más</a>
+                          <h5 class="precio right">$45</h5>
+                          <input type="checkbox" id="calabaza-dulce" />
+                               <label class="margen-check margenes-check" for="calabaza-dulce">Ordenar ahora</label>
+                        </div>
+                      </div>
+               </div>
+
+                <div class="col s12 m4">
+                          <div class="card caja-piña">
+                            <div class="card-image">
+                              <img src="css/img/flanNapolitano.jpg">
+
+                            </div>
+                            <div class="card-content color-cuadro3">
+                              <p>Flan napolitano</p>
+                            </div>
+                            <div class="card-action">
+                              <a class="waves-effect waves-light btn" href="#modal26">Leer más</a>
+                              <h5 class="precio right">$48</h5>
+                              <input type="checkbox" id="flan-napolitano" />
+                                   <label class="margen-check margenes-check" for="flan-napolitano">Ordenar ahora</label>
+                            </div>
+                          </div>
+                 </div>
+
+                 <div class="col s12 m4">
+                            <div class="card caja-piña">
+                              <div class="card-image">
+                                <img src="css/img/Pay-frambuesa.jpg">
+
+                              </div>
+                              <div class="card-content color-cuadro3">
+                                <p>Pay de frambuesa</p>
+                              </div>
+                              <div class="card-action">
+                                <a class="waves-effect waves-light btn" href="#modal27">Leer más</a>
+                                <h5 class="precio right">$50</h5>
+                                <input type="checkbox" id="pay-frambuesa" />
+                                     <label class="margen-check margenes-check" for="pay-frambuesa">Ordenar ahora</label>
+                              </div>
+                            </div>
+                  </div>
+
+                 <div class="col s12 m4">
+                            <div class="card caja-piña">
+                              <div class="card-image">
+                                <img src="css/img/YogurthNatural.jpg">
+
+                              </div>
+                              <div class="card-content color-cuadro3">
+                                <p>Yogurth natural con frutas</p>
+                              </div>
+                              <div class="card-action">
+                                <a class="waves-effect waves-light btn" href="#modal28">Leer más</a>
+                                <h5 class="precio right">$30</h5>
+                                <input type="checkbox" id="yogurth-natural" />
+                                     <label class="margen-check margenes-check" for="yogurth-natural">Ordenar ahora</label>
+                              </div>
+                            </div>
+                  </div>
+
+
+                   <div class="col s12 m4">
+                              <div class="card caja-piña">
+                                <div class="card-image">
+                                  <img src="css/img/Milhojas.jpg">
+
+                                </div>
+                                <div class="card-content color-cuadro3">
+                                  <p>Pastel de mil hojas</p>
+                                </div>
+                                <div class="card-action">
+                                  <a class="waves-effect waves-light btn" href="#modal29">Leer más</a>
+                                  <h5 class="precio right">$55</h5>
+                                  <input type="checkbox" id="mil-hojas" />
+                                       <label class="margen-check margenes-check" for="mil-hojas">Ordenar ahora</label>
+                                </div>
+                              </div>
+                    </div>
+
+                    <div class="col s12 m4">
+                              <div class="card caja-piña">
+                                <div class="card-image">
+                                  <img src="css/img/Pastel-chocolate.jpg">
+
+                                </div>
+                                <div class="card-content color-cuadro3">
+                                  <p>Pastel de chocolate</p>
+                                </div>
+                                <div class="card-action">
+                                  <a class="waves-effect waves-light btn" href="#modal30">Leer más</a>
+                                  <h5 class="precio right">$55</h5>
+                                  <input type="checkbox" id="pastel-chocolate" />
+                                       <label class="margen-check margenes-check" for="pastel-chocolate">Ordenar ahora</label>
+                                </div>
+                              </div>
+                    </div>
+
+    </div>
+</div>
+
+
+
+ <!-- BEEEEEEEEEEEBIIIIIIIIIIIIIIIIIIIIDDDDDDDDDDDAAAAAAAAAASSSSSSSS   -->
+<div id="test4" class="col s12">
+      <div class="chip color-chip3">
+          <p class="secciones center">Té<p>
+      </div>
+   <div class="row center-align fila-ensalada">
+
+            <div class="col s12 m3">
+              <div class="card caja-piña">
+                  <div class="card-image">
+                      <img src="css/img/Te-guayaba.jpg">
+
+                  </div>
+                  <div class="card-content color-cuadro4">
+                      <p>Té de guayaba</p>
+                  </div>
+                  <div class="card-action">
+                      <a class="waves-effect waves-light btn" href="#modal31">Leer más</a>
+                      <h5 class="precio right">$13</h5>
+                        <input type="checkbox" id="te-guayaba" />
+                           <label class="margen-check margenes-check" for= "te-guayaba">Ordenar ahora</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col s12 m3">
+              <div class="card caja-piña">
+                  <div class="card-image">
+                      <img src="css/img/Te-limon.jpg">
+
+                  </div>
+                  <div class="card-content color-cuadro4">
+                      <p>Té de limón</p>
+                  </div>
+                  <div class="card-action">
+                      <a class="waves-effect waves-light btn" href="#modal32">Leer más</a>
+                      <h5 class="precio right">$13</h5>
+                        <input type="checkbox" id="te-limon" />
+                           <label class="margen-check margenes-check" for="te-limon">Ordenar ahora</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col s12 m3">
+              <div class="card caja-piña">
+                  <div class="card-image">
+                      <img src="css/img/Te-naranja.jpg">
+
+                  </div>
+                  <div class="card-content color-cuadro4">
+                      <p>Té de naranja</p>
+                  </div>
+                  <div class="card-action">
+                      <a class="waves-effect waves-light btn" href="#modal33">Leer más</a>
+                      <h5 class="precio right">$13</h5>
+                        <input type="checkbox" id="te-naranja" />
+                           <label class="margen-check margenes-check" for="te-naranja">Ordenar ahora</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col s12 m3">
+              <div class="card caja-piña">
+                  <div class="card-image">
+                      <img src="css/img/Te-manzana.jpg">
+
+                  </div>
+                  <div class="card-content color-cuadro4">
+                      <p>Té de manzana</p>
+                  </div>
+                  <div class="card-action">
+                      <a class="waves-effect waves-light btn" href="#modal33-3">Leer más</a>
+                      <h5 class="precio right">$13</h5>
+                        <input type="checkbox" id="te-manzana" />
+                           <label class="margen-check margenes-check" for="te-manzana">Ordenar ahora</label>
+                  </div>
+                </div>
+              </div>
+
+     </div>
+
+    <div class="chip color-chip3">
+        <p class="secciones center">Atole y Café<p>
+    </div>
+
+    <div class="row center-align fila-ensalada">
+
+                <div class="col s12 m3">
+                  <div class="card caja-piña">
+                      <div class="card-image">
+                          <img src="css/img/Atole-avena.jpg">
+
+                      </div>
+                      <div class="card-content color-cuadro4">
+                          <p>Atole de avena</p>
+                      </div>
+                      <div class="card-action">
+                          <a class="waves-effect waves-light btn" href="#modal34">Leer más</a>
+                          <h5 class="precio right">$15</h5>
+                            <input type="checkbox" id="atole-avena" />
+                               <label class="margen-check margenes-check" for="atole-avena">Ordenar ahora</label>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col s12 m3">
+                    <div class="card caja-piña">
+                        <div class="card-image">
+                            <img src="css/img/Capuchino.jpg">
+
+                        </div>
+                        <div class="card-content color-cuadro4">
+                            <p>Taza de café Capuchino</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="waves-effect waves-light btn" href="#modal35">Leer más</a>
+                            <h5 class="precio right">$15</h5>
+                              <input type="checkbox" id="cafe-capuchino" />
+                                 <label class="margen-check margenes-check" for="cafe-capuchino">Ordenar ahora</label>
+                        </div>
+                      </div>
+                    </div>
+
+                     <div class="col s12 m3">
+                    <div class="card caja-piña">
+                        <div class="card-image">
+                            <img src="css/img/Atole-nuez.jpg">
+
+                        </div>
+                        <div class="card-content color-cuadro4">
+                            <p>Atole de nuéz</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="waves-effect waves-light btn" href="#modal36">Leer más</a>
+                            <h5 class="precio right">$15</h5>
+                              <input type="checkbox" id="atole-nuez" />
+                                 <label class="margen-check margenes-check" for="atole-nuez">Ordenar ahora</label>
+                        </div>
+                      </div>
+                    </div>
+
+
+                     <div class="col s12 m3">
+                    <div class="card caja-piña">
+                        <div class="card-image">
+                            <img src="css/img/Cafe-tostado.jpg">
+
+                        </div>
+                        <div class="card-content color-cuadro4">
+                            <p>Café tostado</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="waves-effect waves-light btn" href="#modal36-6">Leer más</a>
+                            <h5 class="precio right">$18</h5>
+                              <input type="checkbox" id="cafe-tostado" />
+                                 <label class="margen-check margenes-check" for="cafe-tostado">Ordenar ahora</label>
+                        </div>
+                      </div>
+                    </div>
+
+    </div>
+
+     <div class="chip color-chip3">
+        <p class="secciones center">Jugos nutritivos<p>
+    </div>
+
+    <div class="row center-align fila-ensalada">
+
+                  <div class="col s12 m3">
+                    <div class="card caja-piña">
+                        <div class="card-image">
+                            <img src="css/img/Jugo-betabel.jpg">
+
+                        </div>
+                        <div class="card-content color-cuadro4">
+                            <p>Jugo de betabel</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="waves-effect waves-light btn" href="#modal37">Leer más</a>
+                            <h5 class="precio right">$20</h5>
+                              <input type="checkbox" id="jugo-betabel" />
+                                 <label class="margen-check margenes-check" for="jugo-betabel">Ordenar ahora</label>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="col s12 m3">
+                      <div class="card caja-piña">
+                          <div class="card-image">
+                              <img src="css/img/Jugo-zanahoria.jpg">
+
+                          </div>
+                          <div class="card-content color-cuadro4">
+                              <p>Jugo de zanahoria</p>
+                          </div>
+                          <div class="card-action">
+                              <a class="waves-effect waves-light btn" href="#modal38">Leer más</a>
+                              <h5 class="precio right">$20</h5>
+                                <input type="checkbox" id="jugo-zanahoria" />
+                                   <label class="margen-check margenes-check" for="jugo-zanahoria">Ordenar ahora</label>
+                          </div>
+                        </div>
+                      </div>
+
+                     <div class="col s12 m3">
+                    <div class="card caja-piña">
+                        <div class="card-image">
+                            <img src="css/img/Jugo-naranja.jpg">
+
+                        </div>
+                        <div class="card-content color-cuadro4">
+                            <p>Jugo de naranja</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="waves-effect waves-light btn" href="#modal39">Leer más</a>
+                            <h5 class="precio right">$20</h5>
+                              <input type="checkbox" id="jugo-naranja" />
+                                 <label class="margen-check margenes-check" for="jugo-naranja">Ordenar ahora</label>
+                        </div>
+                      </div>
+                    </div>
+
+       <div class="col s12 m3">
+      <div class="card caja-piña">
+          <div class="card-image">
+              <img src="css/img/Jugo-arandano.jpg">
+
+          </div>
+          <div class="card-content color-cuadro4">
+              <p>Jugo de arándano</p>
+          </div>
+          <div class="card-action">
+              <a class="waves-effect waves-light btn leer-mas" href="#modal40">Leer más</a>
+              <h5 class="precio right precio">$20</h5>
+                <input type="checkbox" id="jugo-arandano" />
+                   <label class="margen-check margenes-check" for="jugo-arandano">Ordenar ahora</label>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</div>
+
+ <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
+  <script src="js/materialize.min.js"></script>
+   <script type="text/javascript" src="js/ListaDesayuno.js"></script>
+  <script src="js/index.js"></script>
+
+  <!-- Modal Structure -->
+  <!--En esta sección de código podemos darle estilo al modal gracias al id añadido anteriormente
+  podemos agregar una imagen con la ruta que corresponde, un título, centramos el título añadiendo "center" a la clase del h4, en este caso se utilizó el modal con la intención de mostrar los beneficios de comer cada platillo del restaurante KUBO-->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="card-image center">
+      <img src="css/img/Foto-lechuga.jpg">
+     </div>
+      <h4 class="center Titulo-centrado">Beneficios de la ensalada de lechuga</h4>
+      <p class="texto-lechuga center">La ensalada de lechuga es un alimento con altas dosis de calcio y fósforo que nos ayudan a tener unos huesos sanos y fuertes. Además es una gran fuente de oligoelementos no muy habituales en el mundo vegetal, es un alimento muy recomendable en dietas de adelgazamiento, obesidad, hipertensión.... Además es muy útil en dietas destinadas a bajar el nivel de azúcar en sangre a causa de sus cualidades depurativas.</p>
+    </div>
+  </div>
+
+
+
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+    <div class="card-image center">
+        <img src="css/img/Higos.jpg">
+     </div>
+      <h4 class="center Titulo-centrado">Beneficios de ensalada de higos</h4>
+      <p class="texto-higos center">Los higos son altos en fibra y una buena fuente de varios minerales esenciales, incluyendo al magnesio, calcio,cobre y potasio (el cual ayuda a bajar la presión sanguínea), así como vitaminas, principalmente la K y B6. Ya sea fresco o seco, el higo contiene antioxidantes poderosos que neutralizan a los radicales libres y luchan contra la enfermedad.</p>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+    <div class="card-image center">
+        <img src="css/img/vegetales.jpg">
+      </div>
+      <h4 class="center Titulo-centrado">Beneficios de la ensalada con vegetales</h4>
+      <p class="texto-vegetales center">Los vegetales regulan la función intestinal. Por la riqueza en fibra de los vegetales, una ensalada resulta laxante, previenen o mejora el estreñimiento. Además, la fibra contribuye a reducir el colesterol y el buen control de la glucemia, lo que es benéfico en caso de enfermedades cardiovasculares y diabetes.</p>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+    <div class="card-image center">
+        <img src="css/img/Manzana-img.jpg">
+     </div>
+      <h4 class="center Titulo-centrado">Beneficios de integrar manzana a tu coctel</h4>
+      <p class="texto-higos center">Las manzanas contienen una fibra soluble llamada pectina, que ayuda a reducir el colesterol en la sangre, y evita que se acumule en las paredes de los vasos sanguíneos. También contienen grandes cantidades de potasio, mineral que ayuda a controlar la presión arterial, y puede reducir el riesgo de un ataque cardiaco.</p>
+    </div>
+  </div>
+
+
+  <div id="modal5" class="modal">
+    <div class="modal-content">
+    <div class="card-image center">
+        <img src="css/img/Kiwi-img.jpg">
+     </div>
+      <h4 class="center Titulo-centrado">Beneficios de integrar kiwi a tu coctel</h4>
+      <p class="texto-higos center">Los nutrientes necesarios para huesos fuertes y prevenir la osteoporosis son el calcio, el fósforo, el magnesio, el potasio y las vitaminas C, D y K. El kiwi es rico en fósforo (esencial para la mineralización del hueso), magnesio (regula la absorción y asimilación del calcio)</p>
+    </div>
+  </div>
+
+  <div id="modal6" class="modal">
+    <div class="modal-content">
+    <div class="card-image center img-modal">
+        <img src="css/img/Pinas.jpg">
+     </div>
+      <h4 class="center Titulo-centrado">Beneficios de integrar piña a tu coctel</h4>
+      <p class="texto-higos center">Además de ser una fruta diurética y desintoxicante, la piña se caracteriza por sus contenidos de vitaminas C, B1, B6, ácido fólico y minerales como el sodio, potasio, calcio, magnesio, manganeso y hierro. Gran parte de la composición de la piña es agua y también tiene una cantidad importante de fibra.</p>
+    </div>
+  </div>
+
+  <div id="modal7" class="modal">
+    <div class="modal-content">
+    <div class="card-image center">
+        <img src="css/img/Pasas.jpg">
+     </div>
+      <h4 class="center Titulo-centrado">Beneficios de las pasas</h4>
+      <p class="texto-higos center">Los beneficios de las pasas de uva incluyen alivio de estreñimiento, acidosis, anemia, fiebre y disfunción sexual. Las pasas de uva también se han conocido para ayudar en los intentos para subir el peso en forma saludable, así como su impacto positivo en la salud de los ojos, cuidado dental y calidad ósea.</p>
+    </div>
+  </div>
+
+  <div id="modal8" class="modal">
+    <div class="modal-content">
+    <div class="card-image center">
+        <img src="css/img/Azucares.jpg">
+     </div>
+      <h4 class="center Titulo-centrado">Beneficios de los azucares en el cuerpo</h4>
+      <p class="texto-higos center">El azucar es fundamental para nutrir el sistema nervioso, debido a que las neuronas sólo se alimentan de glucosa, el consumo adecuado de azucar puede tener un efecto tranquilizante al sistema nervioso, calmar la ansiedad tensión e inducir el sueño</p>
+    </div>
+  </div>
+
+  <div id="modal9" class="modal">
+    <div class="modal-content">
+    <div class="card-image center">
+        <img src="css/img/Almendras.jpg">
+     </div>
+      <h4 class="center Titulo-centrado">Beneficios de las almendras</h4>
+      <p class="texto-higos center">Las almendras son reconocidas como uno de los frutos secos más nutritivos y además de tener un delicioso sabor son muy beneficiosas para la salud, ya que ayudan a prevenir muchas enfermedades. Las almendras ayudan a fortalecer los huesos, permiten que la piel y el cabello se vean saludables e hidratados.</p>
+    </div>
+  </div>
+
+   <!-- SECCION DE PLATO FUERTE -->
+
+   <div id="modal10" class="modal">
+    <div class="modal-content modal-content2">
+      <h4 class="center Titulo-centrado">Características del platillo</h4>
+      <p class="texto-higos center">Deliciosas quesadilla de queso acompañadas de una porción de arroz y frijoles que aportan energía y vitalidad a tu cuerpo por caracterizarse como un platillo ligero</p>
+    </div>
+  </div>
+
+
+  <div id="modal11" class="modal">
+    <div class="modal-content modal-content2">
+      <h4 class="center Titulo-centrado">Características del platillo</h4>
+      <p class="texto-higos center">Delicioso Filete Asado acompañado de esparragos y tomates asados, este platillo se caracteríza por su bajo contenido en grasa brinda las calorias necesarias para comenzar el dia con muchas energías</p>
+    </div>
+  </div>
+
+  <div id="modal12" class="modal">
+    <div class="modal-content modal-content2">
+      <h4 class="center Titulo-centrado">Características del platillo</h4>
+      <p class="texto-higos center">Delicioso y sencillo platillo de huevos revueltos acompanado por los vegetales necesarios para empezar el dia de la forma mas nutritiva, pudes acompanarlo con alguna otra opcion de platillo integrando la proteina para comenzar bien tu dia</p>
+    </div>
+  </div>
+
+  <div id="modal13" class="modal">
+    <div class="modal-content modal-content2">
+      <h4 class="center Titulo-centrado">Características del platillo</h4>
+      <p class="texto-higos center">Delicioso platillo hecho a base de nopales asados 100% Mexicanos, el nopal contiene los mejores antioxidantes, ayuda al proceso digestivo, evita el cáncer, y cuida tu corazón etre otros beneficios es por ello su vital importancia de integrarlos en tus platillos</p>
+    </div>
+  </div>
+
+
+  <div id="modal14" class="modal">
+    <div class="modal-content modal-content2">
+      <h4 class="center Titulo-centrado">Características del platillo</h4>
+      <p class="texto-higos center">Pensando en aquellas personas que no pueden comer comidas con mucha grasa les presentamos un delicioso caldo de pollo hecho con las mejores verduras para brindar beneficios a la salud, es por ello que es bajo en grasa y con ingredientes ligeros, para KUBO el cuidado y la salud de las personas es su prioridad </p>
+    </div>
+  </div>
+
+
+  <div id="modal15" class="modal">
+    <div class="modal-content modal-content2">
+      <h4 class="center Titulo-centrado">Características del platillo</h4>
+      <p class="texto-higos center">Nada mejor que un delicioso platillo hecho con ingredientes 100% Mexicanos representando los colores de nuestra Bandera, es muy recomendado y muy vendido ya que aporta los elemntos necesarios para el inicio de nuestro día </p>
+    </div>
+  </div>
+
+  <div id="modal16" class="modal">
+    <div class="modal-content modal-content2">
+      <h4 class="center Titulo-centrado">Características del platillo</h4>
+      <p class="texto-higos center">Delicioso platillo hecho a base de tortilla, jitomate y otros ingredientes tradicionales de nuestro México es ampliamente recomendado debido a su sabor inigualable es muy económico y puede ser acompañado con lo que sea</p>
+    </div>
+  </div>
+
+  <div id="modal17" class="modal">
+    <div class="modal-content modal-content2">
+      <h4 class="center Titulo-centrado">Características del platillo</h4>
+      <p class="texto-higos center">No hay nada mejor que unos deliciosos tamales hechos con ingredientes tradicionales son muy característicos de nuestro pais debido a la sencilles de presentación pero con un gran sabor</p>
+    </div>
+  </div>
+
+  <div id="modal18" class="modal">
+    <div class="modal-content modal-content2">
+      <h4 class="center Titulo-centrado">Características del platillo</h4>
+      <p class="texto-higos center">Deliciosos chilaquiles verdes acompañados de unos huevos estrellados que haran de tu vida una experiencia inimaginable, esta hecho con ingredientes muy representativos de nuestro México aportando sencilles y vitalidad a tu vida ya que estan hechos con Cariño </p>
+    </div>
+  </div>
+
+<div id="modal19" class="modal">
+    <div class="modal-content modal-content2">
+      <h4 class="center Titulo-centrado">Características del platillo</h4>
+      <p class="texto-higos center">Suculento platillo llamado "Taco Méxicano" que te dejará con un sabor inigualable ya que esta hecho con los mejores ingredientes de la región y con un secreto de sabbor que te encantará, es bajo en grasa y aporta ingredientes como el cilantro, cebolla, granos de elote y tomate que daran un buen equilibrio a tu desayuno </p>
+    </div>
+  </div>
+
+<div id="modal20" class="modal">
+    <div class="modal-content modal-content2">
+      <h4 class="center Titulo-centrado">Características del platillo</h4>
+      <p class="texto-higos center">Platillo muy representaivo de nuestro México son las enchiladas rojas muy populares por su sabor y presentación ademas es de bajo precio y aportan un gran sabor a tu paladar, es un paltillo equilibrado ya que esta hecho de proteinas y vegetales dando un equilibrio a tu desayuno</p>
+    </div>
+  </div>
+
+  <div id="modal21" class="modal">
+    <div class="modal-content modal-content2">
+      <h4 class="center Titulo-centrado">Características del platillo</h4>
+      <p class="texto-higos center">Delicioso platillo hecho a base de tortilla 100% de maíz que te dejará con una sensación de querer pedir otra orden de nuestras exsquisitas enchiladas verdes acompañadas de aguacate, rellenas de pollo y con verduras brindando un equilibro a tu desayuno </p>
+    </div>
+  </div>
+
+  <div id="modal22" class="modal">
+    <div class="modal-content modal-content2">
+      <h4 class="center Titulo-centrado">Características del platillo</h4>
+      <p class="texto-higos center">Platillo delicioso hecho a base de tortilla de maíz previamente horneada acompanado de pechuga de pollo ques es preparada con ingrdientes como jitomate, cebolla, ajo en este platillo también se integran los vegetales necesarios para hacer un equilibrio de ingredientes sanos para tu salud</p>
+    </div>
+  </div>
+
+  <div id="modal23" class="modal">
+    <div class="modal-content modal-content2">
+      <h4 class="center Titulo-centrado">Características del platillo</h4>
+      <p class="texto-higos center">No podían faltar los auténticos sopes Mexicanos hechos con ingredientes 100% Mexicanos que te dejarán con la sensación de regresar a nuestro restaurante, es bajo en grasa con ingredientes sanos pero con un sabor inigualable</p>
+    </div>
+  </div>
+
+  <div id="modal24" class="modal">
+    <div class="modal-content modal-content2">
+      <h4 class="center Titulo-centrado">Características del platillo</h4>
+      <p class="texto-higos center">Complementando tu día este platillo contiene ingredientes secretos como el cariño y amor brindando a tu día una mejor eleccion de sabor, los rollitos de pechuga rellena contienen proteinas como el pollo y cerdo en bajas porciones, es acompañado con vegetales frescos como el cilantro, cebolla, hojas de hiervabuena dejando un aroma delicioso, además contiene queso derretido platillo 100% recomendado</p>
+    </div>
+  </div>
+
+  <div id="modal25" class="modal">
+    <div class="modal-content modal-content3">
+      <h4 class="center Titulo-centrado">Características del postre</h4>
+      <p class="texto-higos center">Este postre es 100% tradicional de nuestro pais contiene ingredientes muy conocidos como la calabaza, canela, manzana, tejocote, guayaba, piloncillo entre otros la cual hacen la combinación ideal para deleitar tu paladar</p>
+    </div>
+  </div>
+
+  <div id="modal26" class="modal">
+    <div class="modal-content modal-content3">
+      <h4 class="center Titulo-centrado">Características del postre</h4>
+      <p class="texto-higos center">Delicioso postre hecho a base de Maizena, vainilla y caramelo, perfecto para comer solo o acompañado, contiene frutas exoticas que combinan con el sabor del pay haciendolo ni tan dulce ni tan agrio</p>
+    </div>
+  </div>
+
+  <div id="modal27" class="modal">
+    <div class="modal-content modal-content3">
+      <h4 class="center Titulo-centrado">Características del postre</h4>
+      <p class="texto-higos center">Delicioso postre hecho a base de masa de chocolate acompañado de compota de frambuesa y frutas frescas encima, ideal para deleitar tu paladar después de comer nuestros deliciosos platillos</p>
+    </div>
+  </div>
+
+
+  <div id="modal28" class="modal">
+    <div class="modal-content modal-content3">
+      <h4 class="center Titulo-centrado">Características del postre</h4>
+      <p class="texto-higos center">Delicioso postre de yogurth 100% natual se caracteriza por ser muy ligero y nutritivo es acompañado de frutos rojos y granola</p>
+    </div>
+  </div>
+
+
+  <div id="modal29" class="modal">
+    <div class="modal-content modal-content3">
+      <h4 class="center Titulo-centrado">Características del postre</h4>
+      <p class="texto-higos center">Delicioso postre hecho con ingredientes naturales y con bajos niveles de azucar acompañado de chocolate blanco y cubierto de crema de cacahuate, es muy caracterizado por su masa en mil hojas que te dejara con una sensación de querer volver a repetir el postre</p>
+    </div>
+  </div>
+
+  <div id="modal30" class="modal">
+    <div class="modal-content modal-content3">
+      <h4 class="center Titulo-centrado">Características del postre</h4>
+      <p class="texto-higos center">Delicioso postre de chocolate 100% mexicano acompañado de frutos frescos y con hojas de menta que te dejaran con un aroma fresco y delicioso</p>
+    </div>
+  </div>
+
+  <div id="modal31" class="modal">
+    <div class="modal-content modal-content4">
+      <h4 class="center Titulo-centrado">Características de la bebida</h4>
+      <p class="texto-higos center">Ligero té de guayaba ideal para a poner fin a la intoxicación alimentaria debido a las propiedades antimicrobianas de las hojas de guayaba. Se recomienda consumir te de hojas de guayaba a las personas que sufren de bronquitis, así como para la tos. Ayudan a lidiar con el dolor de muelas, las encías inflamadas y las úlceras orales. Ofrece estos beneficios además de un rico y suave savor</p>
+    </div>
+  </div>
+
+  <div id="modal32" class="modal">
+    <div class="modal-content modal-content4">
+      <h4 class="center Titulo-centrado">Características de la bebida</h4>
+      <p class="texto-higos center">Ligero té de limón consumido, con frecuencia, después de las comidas, ayuda a realizar la digestión, facilitando el tracto intestinal. Además posee un fuerte agente alcalinizador, reduciendo la acidez y los síntomas de indigestión, contiene grandes cantidades de antioxidantes, los cuales sirven para controlar los radicales libres, causantes de potenciar el envejecimiento y determinadas enfermedades cancerígenas. Por tanto es un potente agente preventivo de determinadas enfermedades.</p>
+    </div>
+  </div>
+    <div id="modal33" class="modal">
+    <div class="modal-content modal-content4">
+      <h4 class="center Titulo-centrado">Características de la bebida</h4>
+      <p class="texto-higos center">Ligero té de naranja, enriquecido con vitamina C que ayudrán al sistema inmunológico previniendo enfermedades respiratorias, es elbaorado con fruta 100% natural permitiendo aprovechar todos los nutrientes que el cuerpo necesita para comenzar el día además de integrar otras hierbas para un buen aroma</p>
+    </div>
+  </div>
+
+   <div id="modal33-3" class="modal">
+    <div class="modal-content modal-content4">
+      <h4 class="center Titulo-centrado">Características de la bebida</h4>
+      <p class="texto-higos center">Delicioso té de manzana, disfruta su aroma suave y rico, acompañdo de un toque de canela</p>
+    </div>
+  </div>
+
+   <div id="modal34" class="modal">
+    <div class="modal-content modal-content4">
+      <h4 class="center Titulo-centrado">Características de la bebida</h4>
+      <p class="texto-higos center">Delicioso atole de avena que aporta beneficio a tu cuerpo, nutritiva, emoliente, pectoral, diurética. La receta tradicional es cocer, en un litro de leche, media taza de avena en copos, dos cucharadas de fécula de arroz y dos cucharadas de germen de trigo tostado. El cocimiento se endulza con miel de abeja y, según la edad del enfermo, se suministra de una a tres tazas del atole del día. A manera de diurético suave, se acostumbra ingerir, como agua de uso, un cocimiento de avena (30 gramos por un litro de agua).</p>
+    </div>
+  </div>
+
+ <div id="modal35" class="modal">
+    <div class="modal-content modal-content4">
+      <h4 class="center Titulo-centrado">Características de la bebida</h4>
+      <p class="texto-higos center">Delicioso café capuchino, cremosito y calientito ideal para acompañarlo con pan</p>
+    </div>
+  </div>
+ <div id="modal36" class="modal">
+    <div class="modal-content modal-content4">
+      <h4 class="center Titulo-centrado">Características de la bebida</h4>
+      <p class="texto-higos center">Auténtico atole de nuez 100% mexicano disfrutalo calientito en compañia de tus seres queridos, elaborado con ingredientes natuarles que te dejarán esa sensación de placer para comenzar bien tu día</p>
+    </div>
+  </div>
+
+  <div id="modal36-6" class="modal">
+    <div class="modal-content modal-content4">
+      <h4 class="center Titulo-centrado">Características de la bebida</h4>
+      <p class="texto-higos center">Para comenzar tu día de una mejor forma re recomendamos el delicioso café tostado 100% mexicano con aroma suave y con un sabor excepcional</p>
+    </div>
+  </div>
+
+  <div id="modal37" class="modal">
+    <div class="modal-content modal-content4">
+      <h4 class="center Titulo-centrado">Características de la bebida</h4>
+      <p class="texto-higos center">Nada mejor que un jugo de betabel para comenzar tu día ya que el betabel nos brinda beneficios como vitamina A, vitamina C, calcio y hierro para nuestro cuerpo</p>
+    </div>
+  </div>
+
+  <div id="modal38" class="modal">
+    <div class="modal-content modal-content4">
+      <h4 class="center Titulo-centrado">Características de la bebida</h4>
+      <p class="texto-higos center">¡Dato saludable! Los beneficios de beber jugo de zanahoria. Esta verdura es rica en Vitamina A y su zumo alcaliniza, limpia, nutre y estimula casi todos los sistemas de nuestro organismo. Los zumos están de moda, se han incorporado a la dieta debido a sus propiedades nutritivas y desintoxicantes</p>
+    </div>
+  </div>
+
+  <div id="modal39" class="modal">
+    <div class="modal-content modal-content4">
+      <h4 class="center Titulo-centrado">Características de la bebida</h4>
+      <p class="texto-higos center">El jugo de naranja natural puede reducir los niveles de colesterol “malo”, así como la presión arterial, previniendo de este modo problemas cardiovasculares. Es muy recomendada para comenzar tu día de forma activa</p>
+    </div>
+  </div>
+
+   <div id="modal40" class="modal">
+    <div class="modal-content modal-content4">
+      <h4 class="center Titulo-centrado">Características de la bebida</h4>
+      <p class="texto-higos center"> Auténtico jugo de Arándano ideal para comenzar tu día, algunos de los compuestos del jugo de arándano son capaces de bloquear a las bacterias que provocan infecciones en el tracto urinario, pero también aquellas que afectan el sistema auditivo y el respiratorio, especialmente las que habitan en la nariz y garganta de niños y adultos sanos.</p>
+    </div>
+  </div>
+
+<!--Para la construcción de la tabla que nos aparecerá cada que el usuario seleccione un producto
+se deben declarar las siguientes líneas de código en donde se declara el encabezado de la tabla,
+las filas, los campos y el cuerpo de la tabla-->
+  <div id="divTabla" class="row">
+                <div class="contenedor-tabla col s12 m6 l8 offset-m3 offset-l2">
+                  <!--Tabla vacía-->
+                  <table id="menuTabla" class="responsive-table">
+                        <thead>
+                          <tr>
+                              <th>Nombre</th>
+                              <th>Precio</th>
+                          </tr>
+                        </thead>
+
+                        <tbody id="tbody">
+
+                        </tbody>
+                  </table>
+                    <!--Aquí se insertará el total de la cuenta seleccionada-->
+                    <p class="flow-text left"><strong>Total: </strong></p>
+                    <p id="total" class="flow-text center-align"> </p>
+                </div>
+    </div>
+
+              <a onclick="ordenar();" class="boton-ordenar btn-floating btn-large waves-effect waves-light red pulse"><i class="fa fa-usd" aria-hidden="true"></i></a>
+
+</main>
+<footer class="page-footer green darken-1">
+        <div class="footer-copyright col s12">
+          <div class="container center">
+            <p>2017 Copyright Text | Derechos reservados</p>
+            <a class="grey-text text-lighten-4" href="https://www.facebook.com/analuisa.islasavila">@AnaIslas</a>
+            <a class="grey-text text-lighten-4" href="https://www.facebook.com/jjam2395">@JuanAnaya</a>
+            <a class="grey-text text-lighten-4" href="https://www.facebook.com/cecy.cortez.1428">@CeciliaCortéz</a>
+          </div>
+        </div>
+
+
+
+</body>
+</html>
