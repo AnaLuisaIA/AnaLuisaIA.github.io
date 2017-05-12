@@ -19,10 +19,6 @@ var campoLogin = document.getElementById('nombre_user');
 var campoSesion = document.getElementById('sesion');
 var icono = document.getElementById('icon');
 var comentarioText = document.getElementById('textarea1');
-//Guarda en variables los valores que obtiene de los elementos necesarios para
-//realizar un comentario
-var nombre = document.getElementById('nombre_user').value;
-var comentario = document.getElementById('textarea1').value;
 
 //Modificación de la forma en cómo se muestra la fecha y hora
 const timeStamp = () => {
@@ -121,9 +117,13 @@ comentariosRef.on('child_added', function(snapshot) {
 
 //Acción cuando se da click en el botón de enviar
 function ponerComentario() {
+  //Guarda en variables los valores que obtiene de los elementos necesarios para
+  //realizar un comentario
+  var nombre = document.getElementById('nombre_user').value;
+  var comentario = document.getElementById('textarea1').value;
   var opcionMenu = document.getElementById('seleccion').value;
   //Si no seleccionó una opción de menú
-  if (opcionMenu == null) {
+  if (!opcionMenu) {
     //Dispara una alerta para señalar al usuario que debe escoger una opción del menú
     alert("Escoge la opción del menú");
   }//Si hay valores tanto en nombre, comentario y opcionMenu los almacena en la base de datos
