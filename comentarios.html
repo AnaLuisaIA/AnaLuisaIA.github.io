@@ -46,17 +46,24 @@
     </div>
   </header>
   <main>
+    <!--En este apartado se coloca tanto la parte donde se ingresan los datos para comentar
+    como mostrar los comentarios ya almacenados en la base de datos-->
     <div class="row">
       <div class="col s12 m6 l4 comentario-card">
         <div class="card-panel">
+          <!--Panel donde se almacenan nombre, tipo de menú y comentario-->
           <div class="row">
             <div class="input-field col s12">
               <i class="fa fa-user-o prefix" aria-hidden="true"></i>
+              <!--El usuario ingresa su nombre, de forma predeterminada el campo está llenado
+              con Anónimo-->
               <input value="Anónimo" id="nombre_user" type="text" class="validate">
               <label class="active" for="nombre_user">Nombre</label>
             </div>
             <div class="input-field col s12">
               <i class="fa fa-cutlery prefix" aria-hidden="true"></i>
+              <!--El usuario puede seleccionar entre desayuno, comida y cena para hacer
+              referencia al menú del que quiere realizar el comentario-->
               <select id="seleccion">
                 <option value="" disabled selected>Menú a opinar</option>
                 <option value="Desayuno">Desayuno</option>
@@ -71,6 +78,7 @@
               <div class="row">
                 <div class="input-field col s12">
                   <i class="fa fa-commenting-o prefix" aria-hidden="true"></i>
+                  <!--Área de texto donde se puede escribir el comentario-->
                   <textarea id="textarea1" class="materialize-textarea"></textarea>
                   <label for="textarea1">Comentario</label>
                 </div>
@@ -79,17 +87,22 @@
           </div>
           <div class="row">
             <div class="center-align">
+              <!--Botón que activa la función de ponerComentario() cuando se da click en él-->
               <input type="submit" onClick=ponerComentario() class="waves-effect waves-light btn"></input>
             </div>
           </div>
           <div class="row">
+            <!--Contenedores que cambiarán dinámicamente dependiendo de las condiciones que se
+            establecieron el en index.js-->
             <div class="center-align">
               <i id="icon"></i>
+              <!--Cambia el link entre Iniciar sesión con Google y Cerrar sesión-->
               <a id="sesion"></a>
             </div>
           </div>
         </div>
       </div>
+      <!--El contenedor comentarios agrega los que se encuentran en la BD y los nuevos-->
       <div id="comentarios" class="col l8">
       </div>
     </div>

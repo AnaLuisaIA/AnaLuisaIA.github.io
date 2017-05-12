@@ -33,7 +33,7 @@ const timeStamp = () => {
   return now;
 };
 
-// Configuración de Firebase
+// Configuración de Firebase (Base de datos)
 var config = {
   apiKey: "AIzaSyCnK0SpcgtpqX1Ot6zZjRztAvOvPm0MAyo",
   authDomain: "restaurante-dcf45.firebaseapp.com",
@@ -112,7 +112,8 @@ const addCommentElement = (nombre, opcionMenu, comentario, timeStamp) => {
 comentariosRef.on('child_added', function(snapshot) {
   var nComentario = snapshot.val();
   //Agrega los diferentes valores a la base de datos
-  addCommentElement(nComentario.usuario, nComentario.opcionMenu, nComentario.comentario, nComentario.horaComentario);
+  addCommentElement(nComentario.usuario, nComentario.opcionMenu,
+    nComentario.comentario, nComentario.horaComentario);
 });
 
 //Acción cuando se da click en el botón de enviar
