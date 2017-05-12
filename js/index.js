@@ -18,6 +18,11 @@ $(document).ready(function() {
 var campoLogin = document.getElementById('nombre_user');
 var campoSesion = document.getElementById('sesion');
 var icono = document.getElementById('icon');
+//Guarda en variables los valores que obtiene de los elementos necesarios para
+//realizar un comentario
+var nombre = document.getElementById('nombre_user').value;
+var comentario = document.getElementById('textarea1').value;
+var opcionMenu = document.getElementById('seleccion').value;
 
 //Modificación de la forma en cómo se muestra la fecha y hora
 const timeStamp = () => {
@@ -94,13 +99,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 //de datos, si no existe la crea.
 var comentariosRef = firebase.database().ref('comentarios');
 
-//Función para agregar comentario a la base de datos
-comentariosRef.on('child_added', function(snapshot) {
-  var nComentario = snapshot.val();
-  //Agrega los diferentes valores a la base de datos
-  addCommentElement(nComentario.usuario, nComentario.opcionMenu, nComentario.comentario, nComentario.horaComentario);
-});
-
 //Función para visualizar los comentarios realizados
 const addCommentElement = (nombre, opcionMenu, comentario, timeStamp) => {
   //Guarda en una variable el elemento de comentarios del HTML
@@ -114,14 +112,15 @@ const addCommentElement = (nombre, opcionMenu, comentario, timeStamp) => {
   <p id="cuadroComent">${comentario}</p>${comentarioSeccion.innerHTML}`;
 }
 
+//Función para agregar comentario a la base de datos
+comentariosRef.on('child_added', function(snapshot) {
+  var nComentario = snapshot.val();
+  //Agrega los diferentes valores a la base de datos
+  addCommentElement(nComentario.usuario, nComentario.opcionMenu, nComentario.comentario, nComentario.horaComentario);
+});
+
 //Acción cuando se da click en el botón de enviar
 function ponerComentario() {
-  //Guarda en variables los valores que obtiene de los elementos necesarios para
-  //realizar un comentario
-  let nombre = document.getElementById('nombre_user').value;
-  let comentario = document.getElementById('textarea1').value;
-  let opcionMenu = document.getElementById('seleccion').value;
-
   //Si no seleccionó una opción de menú
   if (!opcionMenu) {
     //Dispara una alerta para señalar al usuario que debe escoger una opción del menú
