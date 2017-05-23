@@ -11,8 +11,36 @@ $(document).ready(function() {
   });
   $('.modal').modal();
   $('select').material_select();
+  $('.collapsible').collapsible();
   $('#textarea1').trigger('autoresize');
 });
+
+var quienes_somos = document.getElementById('quienes');
+var cliente = document.getElementById('clientes');
+var esVisto = false;
+
+function mostrarTexto1() {
+  if (esVisto) {
+    quienes_somos.style.display = "none";
+    esVisto = false;
+  }
+  else{
+    quienes_somos.style.display = "block";
+    esVisto=true;
+  }
+
+}
+
+function mostrarTexto2() {
+  if (esVisto) {
+    cliente.style.display = "none";
+    esVisto = false;
+  }
+  else{
+    cliente.style.display = "block";
+    esVisto=true;
+  }
+}
 
 //Variables globales que hacer referencias a elementos del HTML
 var campoLogin = document.getElementById('nombre_user');

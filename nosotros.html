@@ -3,27 +3,28 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Portada</title>
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Pacifico|Taviraj" rel="stylesheet">
+  <title>Nosotros</title>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Pacifico|Taviraj|Questrial" rel="stylesheet">
   <link rel="stylesheet" href="css/materialize.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body class="fondo">
+<body class="grey lighten-5">
   <header>
     <nav class="top-nav">
       <div class="container">
         <div class="nav-wrapper">
-          <a class="page-title">Portada</a>
+          <a class="page-title">Acerca de...</a>
           <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
             <i class="fa fa-bars fa-3x" aria-hidden="true"></i></a>
         </div>
       </div>
     </nav>
     <ul id="nav-mobile" class="side-nav fixed">
-      <li class="logo"><img src="css/img/logo.png"></a></li>
+      <li class="logo"><img src="css/img/logo.png"></a>
+      </li>
       <li><a class="waves-effect bold" href="index.html">Inicio</a></li>
       <li><a class="waves-effect bold" href="nosotros.html">Nosotros</a></li>
       <li class="no-padding">
@@ -46,53 +47,29 @@
     </div>
   </header>
   <main>
-    <div class="row">
-      <div class="col s6 m6 l3 left-align">
-        <img id="logo_sep" src="css/img/SEP_logo_2012.png">
-      </div>
-      <div class="col s6 m6 l6 hide-on-med-and-down center-align">
-        <h4 id="tecnologico">Instituto Tecnológico de Cuautla</h4>
-      </div>
-      <div class="col s6 m6 l3 right-align">
-        <img id="logo_tec" src="css/img/logo_itc.png">
-      </div>
-    </div>
-    <div class="row center-align">
-      <h4 id="nombre" class="flow-text">"Restaurante Kubo"</h4>
-    </div>
-    <div class="row">
-      <div class="col s12 m6 l6 offset-l3 offset-m3 center-align">
-        <div class="card-panel hoverable">
-          <h5 class="flow-text"><strong>Diseño y Desarrollo de Aplicaciones Móviles</strong></h5>
-          <h5 class="flow-text">Docente: I.S.C. Armando Rodríguez Jiménez</h5>
+    <section class="row">
+      <div class="col s12 m12 l10 offset-l1">
+        <h3 class="center-align" style="font-family:Questrial;"><a href="javascript:mostrarTexto1()" style="color:black;">
+          ¿Quiénes somos?</a></h2>
+        <hr>
+        <div id="quienes">
+          <p class="flow-text" align="justify">Kubo nace en el 2017 con el propósito de ofrecer
+          a la ciudad de Cuautla una opción diferente para comer durante el día. Con menús innovadores,
+        tradicionales y deliciosos, Kubo se convierte en un restaurante que busca convertirse en uno de los
+      mejores del estado, donde nuestra calidad en atención a cliente, comida y establecimiento nos avalen.</p>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col s12 m6 l4 offset-l4 offset-m3">
-        <ul class="collection with-header">
-          <li class="collection-header center-align">
-            <h5 id="index-letra">Integrantes</h5></li>
-          <li class="collection-item">
-            <img src="css/img/juan.jpg" class="circle cchico">
-            <span id="nombreInt">Juan José Anaya Moreno</span></li>
-          <li class="collection-item">
-            <img src="css/img/cecy.jpg" class="circle cchico">
-            <span id="nombreInt">Cecilia Cortéz Benitez</span></li>
-          <li class="collection-item">
-            <img src="css/img/ana.jpg" class="circle cchico">
-            <span id="nombreInt">Ana Luisa Islas Avila</span></li>
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col s12 m4 l4 offset-l4 offset-m4 center-align">
-        <div class="card-panel hoverable">
-          <span id="index-letra">Práctica 19/Mayo/2017</span>
-          <a href="https://docs.google.com/document/d/1UUWqz_9lVegJDszOfkEVQRNOTlwjFzYjslZElokHPP0/edit?usp=sharing" class="truncate" target="_blank">
-            Visualizar reporte de práctica (Chat)
-          </a>
+        <h3 class="center-align" style="font-family:Questrial;"><a href="javascript:mostrarTexto2()" style="color:black;">
+          Creemos en dar una excelente atención al cliente</a></h2>
+        <hr>
+        <div id="clientes">
+          <p class="flow-text" align="justify">Con sabor mexicano pero filosofía oriental, queremos brindarte la mejor experiencia
+          en Kubo. Nos diferenciamos por nuestro trato al cliente, ya que su satisfacción es importante. También tomamos en cuenta
+        las sugerencias realizadas. Nuestro servicio es rápido, de calidad, solo los mejores están en Kubo.</p>
         </div>
+        <h3 class="center-align" style="font-family:Questrial;">Encuéntranos <i class="fa fa-map-marker" aria-hidden="true"></i></h2>
+          <div class="video-container">
+              <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1o4SBprhBTmoAPxUuXaNvsFV44fQ" width="640" height="480"></iframe>
+          </div>
       </div>
     </div>
   </main>

@@ -167,6 +167,10 @@ hr {
   margin-top: 1.5em;
 }
 
+#clientes, #quienes{
+  display: none;
+}
+
 footer.page-footer {
   padding-top: 0px;
 }
