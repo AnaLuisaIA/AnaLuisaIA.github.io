@@ -5,16 +5,14 @@ $(document).ready(function() {
     edge: 'left', // Choose the horizontal origin
     draggable: true // Choose whether you can drag to open on touch screens
   });
-  $('.slider').slider({
-    indicators: false,
-    height: 300
-  });
+  $('.slider').slider({indicators: false, height: 300});
   $('.modal').modal();
   $('select').material_select();
   $('.collapsible').collapsible();
   $('#textarea1').trigger('autoresize');
 });
 
+//Configuración de quiénes somos
 var quienes_somos = document.getElementById('quienes');
 var cliente = document.getElementById('clientes');
 var esVisto = false;
@@ -23,10 +21,9 @@ function mostrarTexto1() {
   if (esVisto) {
     quienes_somos.style.display = "none";
     esVisto = false;
-  }
-  else{
+  } else {
     quienes_somos.style.display = "block";
-    esVisto=true;
+    esVisto = true;
   }
 
 }
@@ -35,13 +32,61 @@ function mostrarTexto2() {
   if (esVisto) {
     cliente.style.display = "none";
     esVisto = false;
-  }
-  else{
+  } else {
     cliente.style.display = "block";
-    esVisto=true;
+    esVisto = true;
   }
 }
 
+//Variable que será utilizada para identificar el marcador en el mapa
+var marker;
+//Inicializamos el mapa personalizado
+function initMap() {
+  //Colocamos la latitud y longitud del lugar que queremos señalar
+  var uluru = {
+    lat: 18.80534,
+    lng: -98.95018
+  };
+  //Se crea un nuevo mapa, lo almacenamos en la variable map
+  var map = new google.maps.Map(document.getElementById('map'), {
+    //El zoom puede ir de 0 a 20, indicamos que el mapa tendrá zoom de 15
+    zoom: 15,
+    center: uluru
+  });
+  //Utilizamos la variable de marker para inicializar el marcador con ciertos atributos
+  marker = new google.maps.Marker({
+    //El marcador aparece centrado en el mapa
+    position: map.getCenter(),
+    //El título que tendrá el marcador
+    title: 'Restaurante Kubo',
+    //Animación que realizará el marcador cuando se cargue el mapa
+    animation: google.maps.Animation.DROP,
+    //Ícono que aparecerá en vez del tradicional de Google
+    icon: 'http://i66.tinypic.com/qsv9zd.png',
+     map: map});
+  //Sobre el marcador aparece una ventana de información
+  var popup = new google.maps.InfoWindow({
+    //En la ventana de información aparecerá el nombre del restaurante
+    content: 'Restaurante Kubo'});
+  //Indicamos que la ventana de información del marcador aparecerá
+  //cuando se muestre el mapa
+  popup.open(map, marker);
+  //El marcador además tiene una función cuando se da click en él
+  marker.addListener('click', toggleBounce);
+  //Se manda a llamar a la función de toggleBounce que hace rebotar al marcador
+  function toggleBounce() {
+    if (marker.getAnimation() !== null) {
+      marker.setAnimation(null);
+    } else {
+      //Cuando se identifica un click en el marcador se amplía el zoom del mapa
+      //y se utiliza la animación de BOUNCE o rebotar.
+      map.setZoom(20);
+      marker.setAnimation(google.maps.Animation.BOUNCE);
+    }
+  }
+}
+
+//Firebase configuración
 //Variables globales que hacer referencias a elementos del HTML
 var campoLogin = document.getElementById('nombre_user');
 var campoSesion = document.getElementById('sesion');
@@ -83,7 +128,8 @@ var user = firebase.auth().currentUser;
 firebase.auth().onAuthStateChanged(function(user) {
   //Si hay un usuario conectado
   if (user) {
-    let name, email;
+    let name,
+      email;
     //Si el usuario no es nulo
     if (user != null) {
       //Obtener el nombre del usuario y guardar en la variable name
@@ -105,10 +151,9 @@ firebase.auth().onAuthStateChanged(function(user) {
       campoSesion.innerText = "Cerrar sesión";
       campoSesion.setAttribute('href', 'javascript:cerrarSesion()');
       //Agrega la clase al elemento icon permitiendo que pueda ser visto.
-      icono.className = "fa fa-sign-out";
+      icono.className = "fa fa-sign-out"; //Si no hay un usuario conectado
     }
-  } //Si no hay un usuario conectado
-  else {
+  } else {
     //Habilita el campo de nombre y modifica el texto del enlace para iniciar/cerrar
     //sesión por Iniciar sesión con Google, agregando la función sesionGoogle()
     campoLogin.removeAttribute('disabled');
@@ -140,8 +185,7 @@ const addCommentElement = (nombre, opcionMenu, comentario, timeStamp) => {
 comentariosRef.on('child_added', function(snapshot) {
   var nComentario = snapshot.val();
   //Agrega los diferentes valores a la base de datos
-  addCommentElement(nComentario.usuario, nComentario.opcionMenu,
-    nComentario.comentario, nComentario.horaComentario);
+  addCommentElement(nComentario.usuario, nComentario.opcionMenu, nComentario.comentario, nComentario.horaComentario);
 });
 
 //Acción cuando se da click en el botón de enviar
@@ -154,17 +198,12 @@ function ponerComentario() {
   //Si no seleccionó una opción de menú
   if (!opcionMenu) {
     //Dispara una alerta para señalar al usuario que debe escoger una opción del menú
-    alert("Escoge la opción del menú");
-  }//Si hay valores tanto en nombre, comentario y opcionMenu los almacena en la base de datos
-  else if (nombre && comentario && opcionMenu) {
+    alert("Escoge la opción del menú" //Si hay valores tanto en nombre, comentario y opcionMenu los almacena en la base de datos
+    );
+  } else if (nombre && comentario && opcionMenu) {
     //Dentro de la base de datos se realiza un push() que permite agregar los datos con la
     //estructura nombre-valor
-    rootRef.child('comentarios').push({
-      usuario: nombre,
-      comentario: comentario,
-      opcionMenu: opcionMenu,
-      horaComentario: timeStamp()
-    });
+    rootRef.child('comentarios').push({usuario: nombre, comentario: comentario, opcionMenu: opcionMenu, horaComentario: timeStamp()});
     //Se setean el campo de nombre y comentario en blanco
     campoLogin.value = '';
     comentarioText.value = '';
@@ -192,6 +231,5 @@ function cerrarSesion() {
     //Cambia el campo de nombre por anónimo
     campoLogin.value = 'Anónimo';
   }, //Captura el error si hay algún fallo con el cierre de sesión
-  function(error) {
-  });
+      function(error) {});
 }

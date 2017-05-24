@@ -171,6 +171,11 @@ hr {
   display: none;
 }
 
+#map {
+  height: 400px;
+  width: 100%;
+ }
+ 
 footer.page-footer {
   padding-top: 0px;
 }

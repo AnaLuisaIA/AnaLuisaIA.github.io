@@ -67,9 +67,14 @@
         las sugerencias realizadas. Nuestro servicio es rápido, de calidad, solo los mejores están en Kubo.</p>
         </div>
         <h3 class="center-align" style="font-family:Questrial;">Encuéntranos <i class="fa fa-map-marker" aria-hidden="true"></i></h2>
+          <!--Contenedor responsivo para el frame generado por Google Maps-->
           <div class="video-container">
-              <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1o4SBprhBTmoAPxUuXaNvsFV44fQ" width="640" height="480"></iframe>
+              <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1o4SBprhBTmoAPxUuXaNvsFV44fQ"
+              width="640" height="480"></iframe>
           </div>
+          <br>
+          <!--Divisor en donde se visualizará el mapa-->
+          <div id="map"></div>
       </div>
     </div>
   </main>
@@ -86,6 +91,10 @@
   </footer>
 
   <script type='text/javascript' , src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
+  <!--Script que se debe agregar para utilizar Google Maps, el código es dado desde la página de Google-->
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnK0SpcgtpqX1Ot6zZjRztAvOvPm0MAyo&callback=initMap">
+  </script>
   <script type="text/javascript" src="js/index.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
